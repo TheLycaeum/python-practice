@@ -5,18 +5,18 @@ def count_words(x):
     return len(x.split(" "))
 
 def largest(x):
-    max = x[0]
+    biggest = x[0]
     for i in x:
-       if i > max:
-           max = i
-    return max
+       if i > biggest:
+           biggest = i
+    return biggest
 
 def smallest(x):
-    min = x[0]
+    s = x[0]
     for i in x:
-       if i < min:
-        min = i
-    return min
+       if i < s:
+        s = i
+    return s
 
 def largest_smallest(x):
     min = x[0]
