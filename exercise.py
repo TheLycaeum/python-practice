@@ -98,21 +98,30 @@ def panagram(x):
     #     return True
 
 def freq(s):
-    a = list(s)
-    a.sort()
-    inwords = (set(a))
-    new = []
-    for word in inwords:
-        counts = s.count(word)
-        new.append(counts)
-    freqdict = {}
-    for key in inwords:
-        for value in new:
-            freqdict[key] = value
-            new.remove(value)
-            break
+    counts  = {}
+    for i in s:
+        if i in counts:
+            counts[i] += 1
+        else:
+            counts[i] = 1
+    return  counts
 
-    return freqdict
+
+    # a = list(s)
+    # a.sort()
+    # inwords = (set(a))
+    # new = []
+    # for word in inwords:
+    #     counts = s.count(word)
+    #     new.append(counts)
+    # freqdict = {}
+    # for key in inwords:
+    #     for value in new:
+    #         freqdict[key] = value
+    #         new.remove(value)
+    #         break
+
+    # return freqdict
 
 def mode(s):
     inwords = (set(s))
