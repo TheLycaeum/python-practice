@@ -1,3 +1,5 @@
+import math
+
 def digits(x):
     return len(list(x))
  
@@ -36,11 +38,16 @@ def mean(x):
 
 
 def median(x):
-    x.sort()
-    if len(x) % 2 == 0:
-        return ((x[int(len(x)/2)] + x[int((len(x)/2) - 1)]) / 2)
+    c = x[:]
+    c.sort() # Sorting x directly modifies the input. This might not be acceptable
+    l = len(x) # Calculate this once. Don't repeat the computation
+    if l % 2 == 0: # Even number of elements. Average of two middle elements
+        mid = math.floor(l/2) # Prefer using math.floor and math.ceil rather than int (more explicit)
+        ret = (c[mid]+c[mid-1])/2.0
     else:
-        return x[int((len(x) - 1) / 2)]
+        mid = math.floor(l/2)
+        ret = c[mid]
+    return ret
 
 def tables(x, y):
     i = 1
