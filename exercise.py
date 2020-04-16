@@ -1,12 +1,8 @@
 def digits(x):
-    a = list(x)
-    b = len(a)
-    return b
-
+    return len(list(x))
+ 
 def count_words(x):
-    sentence_list = list(x.split(" "))
-    words = len(sentence_list)
-    return words
+    return len(x.split(" "))
 
 def largest(x):
     max = x[0]
