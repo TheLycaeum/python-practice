@@ -124,19 +124,26 @@ def freq(s):
     # return freqdict
 
 def mode(s):
-    inwords = (set(s))
-    new = []
-    for word in inwords:
-        counts = s.count(word)
-        new.append(counts)
-    freqdict = {}
-    for key in new:
-        for value in inwords:
-            freqdict[key] = value
-            inwords.remove(value)
-            break
+    counts = freq(s) # Using the previous function
+    items = counts.items() # items is of the form [(1, 10), (5, 3),...] where 1,5 etc. are the numbers in s and 10, 3 are the number of times it's there. Each items is of the form (value, no. of times it occurs)
+    def keyfn(x): # function to return the second element from a tuple like the one mentioned above
+        return x[1]
+    ret = max(items, key=keyfn) # Will return the item with the second element (i.e. count) as maximum
+    return ret[0] # Return the element
 
-    return  freqdict[max(freqdict.keys())]
+    # inwords = (set(s))
+    # new = []
+    # for word in inwords:
+    #     counts = s.count(word)
+    #     new.append(counts)
+    # freqdict = {}
+    # for key in new:
+    #     for value in inwords:
+    #         freqdict[key] = value
+    #         inwords.remove(value)
+    #         break
+
+    # return  freqdict[max(freqdict.keys())]
 
 def den(x):
     a = 0
