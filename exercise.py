@@ -19,15 +19,13 @@ def smallest(x):
     return s
 
 def largest_smallest(x):
-    min = x[0]
-    max = x[0]
+    s = b = x[0] # smallest and biggest are set to the first element
     for i in x:
-        if i < min:
-           min = i
-    for j in x:
-        if j > max:
-            max = j
-    return [max, min]
+        if i > b:
+            b = i
+        if i < s:
+            s = i
+    return s, b
 
 
 def mean(x):
