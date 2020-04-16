@@ -91,7 +91,7 @@ def panagram(x):
     else:
         return True
 
-    def freq(s):
+def freq(s):
     a = list(s)
     a.sort()
     inwords = (set(a))
