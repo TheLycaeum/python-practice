@@ -50,11 +50,14 @@ def median(x):
     return ret
 
 def tables(x, y):
-    i = 1
-    while  i <= int(y):
-        k = int(x) * int(i)
-        a = print(f"{x} x {i}= {k}")
-        i += 1
+    for i in range(1, y+1):
+        print (f"{x} x {i} = {x*i}")
+
+    # i = 1
+    # while  i <= int(y): # Remove superfluous 
+    #     k = int(x) * int(i) # calls to "int" 
+    #     a = print(f"{x} x {i}= {k}")
+    #     i += 1
 
 def tables2(x):
        b = 1
