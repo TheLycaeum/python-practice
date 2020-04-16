@@ -80,16 +80,22 @@ def tables2(x):
        # return
        
 def panagram(x):
-    x =  x.replace(" ", "")
-    a = list(x)
-    b = list(set(a))
-    b.sort()
-    c = "abcdefghijklmnopqrstuvwxyz"
-    d = list(c)
-    if b != d:
-        return False
-    else:
-        return True
+    for i in "abcdefghijklmnopqrstuvwxyz": # For each letter
+        if i not in x: # If it's missing
+            return False # x is not a panagram
+    return True # Otherwise all letters are there and it is a panagram
+        
+
+    # x =  x.replace(" ", "")
+    # a = list(x)
+    # b = list(set(a))
+    # b.sort()
+    # c = "abcdefghijklmnopqrstuvwxyz"
+    # d = list(c)
+    # if b != d:
+    #     return False
+    # else:
+    #     return True
 
 def freq(s):
     a = list(s)
