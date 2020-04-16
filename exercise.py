@@ -29,12 +29,11 @@ def largest_smallest(x):
 
 
 def mean(x):
-    l = 0
-    d = 0
-    while (l < len(x)):
-        d = d + int(x[l])
-        l += 1
-    return d / len(x)
+    acc = 0
+    for i in x:
+        acc += i
+    return acc/len(x)
+
 
 def median(x):
     x.sort()
