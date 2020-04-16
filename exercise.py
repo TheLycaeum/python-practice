@@ -147,7 +147,7 @@ def mode(s):
 
 def den(x):
     a = 0
-    while x >= 2000:
+    while x >= 2000: # Use a for loop to loop through denominations.  Don't cut/paste like this
         x -= 2000
         a += 1
         print(f"2000 x {a} = {2000 * a} ({x} left)")
