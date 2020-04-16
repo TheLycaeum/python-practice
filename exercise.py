@@ -60,16 +60,24 @@ def tables(x, y):
     #     i += 1
 
 def tables2(x):
-       b = 1
-       while b <= x:
-              for a in range(1,int(x + 1)):
-                     print(a * b, end="\t ")
-              print('\n')
-              if b == 1:
-                     print("--+-","-" * 8 * (int(x - 1)))
-              print('\n')
-              b += 1
-       return
+    for c in range(1, x+1):
+        row = []
+        for r in range(1, x+1):
+            row.append("{:5}".format(c*r))
+        print (" ".join(row) + "\n")
+        
+            
+    
+       # b = 1
+       # while b <= x:
+       #        for a in range(1,int(x + 1)):
+       #               print(a * b, end="\t ")
+       #        print('\n')
+       #        if b == 1:
+       #               print("--+-","-" * 8 * (int(x - 1)))
+       #        print('\n')
+       #        b += 1
+       # return
        
 def panagram(x):
     x =  x.replace(" ", "")
